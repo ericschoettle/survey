@@ -1,60 +1,24 @@
-// Back-end logic:
-var add = function(number1, number2) {
-  return number1 + number2;
-};
-
-var subtract = function(number1, number2) {
-  return number1 - number2;
-};
-
-var multiply = function(number1, number2) {
-  return number1 * number2;
-};
-
-var divide = function(number1, number2) {
-  return number1 / number2;
-};
-
-
-// Front-end logic
-$(document).ready(function() {
-  $("form#add").submit(function(event) {
+$(document).ready(function(){
+  $("form#survey").submit(function(event){
     event.preventDefault();
-    var number1 = parseFloat($("#add1").val());
-    var number2 = parseFloat($("#add2").val());
-    var result = add(number1, number2);
-    $("#output").text(result);
-  });
+    // Full Name
+    var fullName = $("input#full-name").val();
+    console.log(fullName);
 
-  //pull-down-menu
-  $("form#pull-down").submit(function(event) {
-    event.preventDefault();
-    var arithmaticOperator = $("#arithmatic-operator").val();
-    console.log(arithmaticOperator);
-  });
+    //Favorite Food
+    var food = $("select#favorite-foods").val();
+    console.log(food);
 
-  //radio-button
-  $("form#radio-button").submit(function(event) {
-    event.preventDefault();
-    var flavor = $("input:radio[name=flavor]:checked").val();
-    console.log(flavor);
-  });
+    //Favorite Music
+    var music = $("input:radio[name=music]:checked").val();
+    console.log(music);
+    
+    //Color
+    var favoriteColor = $("input#color").val();
+    console.log(favoriteColor);
 
-  //Date
-  $("form#date").submit(function(event) {
-    event.preventDefault();
-    var date = $("#born").val();
+    //Date
+    var date = $("input#date").val();
     console.log(date);
   });
-
-  //Color
-  $("form#color-picker").submit(function(event) {
-    event.preventDefault();
-    var color = $("#color").val();
-    console.log(color);
-  });
-
-
-
-
 });
