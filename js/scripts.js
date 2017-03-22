@@ -1,49 +1,60 @@
+// Back-end logic:
+var add = function(number1, number2) {
+  return number1 + number2;
+};
+
+var subtract = function(number1, number2) {
+  return number1 - number2;
+};
+
+var multiply = function(number1, number2) {
+  return number1 * number2;
+};
+
+var divide = function(number1, number2) {
+  return number1 / number2;
+};
+
+
+// Front-end logic
 $(document).ready(function() {
+  $("form#add").submit(function(event) {
+    event.preventDefault();
+    var number1 = parseFloat($("#add1").val());
+    var number2 = parseFloat($("#add2").val());
+    var result = add(number1, number2);
+    $("#output").text(result);
+  });
 
-  // var add = function(number1, number2) {
-  //   return number1 + number2;
-  // };
-  //
-  // var subtract = function(number1, number2) {
-  //   return number1 - number2;
-  // };
-  //
-  // var multiply = function(number1, number2) {
-  //   return number1 * number2;
-  // };
-  //
-  // var divide = function(number1, number2) {
-  //   return number1 / number2;
-  // };
-  //
-  // var number1 = parseInt(prompt("Enter a number:"));
-  // var number2 = parseInt(prompt("Enter another number:"));
-  // var result = multiply(number1, number2);
-  // alert(result);
+  //pull-down-menu
+  $("form#pull-down").submit(function(event) {
+    event.preventDefault();
+    var arithmaticOperator = $("#arithmatic-operator").val();
+    console.log(arithmaticOperator);
+  });
 
-  // var extractFeetAndInchesFromText = function(height) {
-  //   var str = "6 foot 1";
-  //   var res = str.match(/\d/g);
-  // }
-  //
-  // var convertFeetAndInchesToInches = function(feet, inches) {
-  //   return feet * 12 + inches;
-  // };
-  //
-  // var convertInchesToMeters = function(heightInInches) {
-  //   return heightInInches / 39.37;
-  // };
-  //
-  // var convertPoundsToKilograms = function(weightInPounds) {
-  //   return weightInPounds / 2.2;
-  // };
-  //
-  // var calculateBMI = function(heightInMeters, weightInKilograms) {
-  //   return weightInKilograms / (heightInMeters ^ 2 ;)
-  // };
+  //radio-button
+  $("form#radio-button").submit(function(event) {
+    event.preventDefault();
+    var flavor = $("input:radio[name=flavor]:checked").val();
+    console.log(flavor);
+  });
 
-  var str = "6 foot 1";
-  var res = str.split([/\s/]);
-  alert(res);
+  //Date
+  $("form#date").submit(function(event) {
+    event.preventDefault();
+    var date = $("#born").val();
+    console.log(date);
+  });
+
+  //Color
+  $("form#color-picker").submit(function(event) {
+    event.preventDefault();
+    var color = $("#color").val();
+    console.log(color);
+  });
+
+
+
 
 });
