@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Survey</h1>
+        <form id="survey">
+
+          <!-- First Name -->
+          <div class="form-group">
+            <label for="first-name"><h3>First Name</h3></label>
+            <input id="first-name" type="text" class="form-control">
+          </div>
+
+          <!-- Favorite Food -->
+
+          <div class="form-group">
+            <label for="favorite-foods"><h3>Favorite Food</h3></label>
+            <select class="form-control" id="favorite-foods">
+              <option value="pizza">Pizza</option>
+              <option value="hamburger">Hamburger</option>
+              <option value="salad">Salad</option>
+              <option value="tacos">Tacos</option>
+              <option value="pasta">Pasta</option>
+            </select>
+          </div>
+
+
+          <!-- Favorie Music, bootstrap style-->
+          <fieldset class="form-group">
+            <legend><h3>Favorite Music</h3></legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="hip-hop" name="music" checked>
+                Hip Hop
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="jazz" name="music">
+                Jazz
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="gospel" name="music">
+                Gospel
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="folk" name="music">
+                Folk
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="classical" name="music">
+                Classical
+              </label>
+            </div>
+          </fieldset>
+
+
+          <!-- favorite music, Epicodus style -->
+          <!-- <div class="radio">
+            <label>
+              <input type="radio" name="music" value="music1" checked>
+              Music1
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="music" value="Music2">
+              Music2
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="music" value="Music3">
+              Music3
+            </label>
+          </div> -->
+
+          <!-- favorite color -->
+          <div class="form-group">
+            <label for="color"><h3>Favorite color</h3></label>
+            <input id="color" type="color" class="form-control">
+          </div>
+
+          <!-- Date -->
+          <div class="form-group">
+            <label for="date"><h3>Date</h3></label>
+            <input id="date" type="date" class="form-control">
+          </div>
+
+          <!-- timea -->
+          <div class="form-group">
+            <label for="time"><h3>time</h3></label>
+            <input id="time" type="time" class="form-control">
+          </div>
+          <!--  their favorite foods, their favorite music, and any other information you feel like. Include all form input types we've covered so far (except checkboxes; we'll learn more about those next week! -->
+          <button type="submit" class="btn btn-info btn-lg btn-block">Submit</button>
+        </form>
+      </div>
+      <div class="jumbotron">
+        <h3>contact:</h3>
+        <ul class="contact">
+
+        </ul>
+      </div>
+      <div class="info">
+        <div class="jumbotron">
+          <h3>info:</h3>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

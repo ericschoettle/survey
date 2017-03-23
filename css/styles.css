@@ -6,3 +6,7 @@
 .btn {
   margin-top: 40px;
 }
+
+.info > div > div {
+  display: none;
+}
